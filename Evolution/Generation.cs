@@ -29,8 +29,8 @@ namespace Evolution {
 					cycles++;
 				}
 
-				var fitness = stringDistance(machine.output, "Hello World");//Math.Abs(dmem[0] - 127);
-				if (fitness == 0) {
+				double fitness = stringDistance(machine.output, "123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123");//Math.Abs(dmem[0] - 127);
+				if (Math.Abs(fitness) < 0.001) {
 					fitness = -10000 + machine.program.Length;
 				}
 

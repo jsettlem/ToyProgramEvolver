@@ -6,7 +6,7 @@ namespace Evolution {
 
 		private int genNumber;
 		private Generation currentGen;
-		private int bestFitness = Int32.MaxValue;
+		private double bestFitness = Double.PositiveInfinity;
 
 		public Runner() {
 			genNumber = 0;
@@ -44,7 +44,13 @@ namespace Evolution {
 		}
 
 		private BrainfuckProgram getMutant(BrainfuckProgram parent) {
-			return new BrainfuckProgram(parent.mutate());
+			var copy = parent.clone();
+			var newProgram = new char[0];
+			do {
+				newProgram = copy.mutate();
+			} while (Program.rnd.NextDouble() < 0.75);
+
+			return new BrainfuckProgram(newProgram);
 		}
 	}
 }
