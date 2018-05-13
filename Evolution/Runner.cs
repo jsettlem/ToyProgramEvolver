@@ -12,7 +12,7 @@ namespace Evolution {
 			genNumber = 0;
 			var machines = new BrainfuckProgram[100];
 			for (var i = 0; i < 100; i++) {
-				machines[i] = new BrainfuckProgram(BrainfuckProgram.RandomProgram(100));
+				machines[i] = new BrainfuckProgram(BrainfuckProgram.RandomProgram(1));
 			}
 
 			currentGen = new Generation(machines);

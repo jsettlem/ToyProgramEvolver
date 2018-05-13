@@ -87,6 +87,10 @@ namespace Evolution.AbstractMachines.Brainfuck {
 							}
 							pc--;
 						}
+
+						if (pc < 0) {
+							pc = Int32.MinValue;
+						}
 					}
 					break;
 			}

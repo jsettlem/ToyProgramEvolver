@@ -29,7 +29,7 @@ namespace Evolution {
 					cycles++;
 				}
 
-				var fitness = stringDistance(machine.output, "Jordan");//Math.Abs(dmem[0] - 127);
+				var fitness = stringDistance(machine.output, "Hello World");//Math.Abs(dmem[0] - 127);
 				if (fitness == 0) {
 					fitness = -10000 + machine.program.Length;
 				}
